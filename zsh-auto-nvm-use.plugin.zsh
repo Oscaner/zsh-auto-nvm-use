@@ -6,7 +6,7 @@ load-nvmrc() {
     # Check if nvm is installed
     local nvm_version=$(nvm version "$(cat .nvmrc)")
     if echo $nvm_version | grep -q "N/A"; then
-      nvm install --no-progress
+      nvm install
     fi
 
     nvm use --silent
